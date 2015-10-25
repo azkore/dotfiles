@@ -1,3 +1,4 @@
+export SHELL=`which zsh`
 source ~/.shrc
 source ~/.shaliases
 
