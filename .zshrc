@@ -117,3 +117,4 @@ alias -g O="2>&1"
 
 #no manual rehash
 zstyle ':completion:*' rehash true
+echo "HELLOOOOOOOOOOOO!!!!"
