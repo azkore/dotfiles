@@ -68,3 +68,5 @@ if [ eterm = $TERM ]; then
     unset os
     unset date
 fi
+
+ssh() { printf '\033k'${@: -1}'\033\\'; /usr/bin/ssh ${@: -1} ;}
