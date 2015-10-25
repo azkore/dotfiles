@@ -34,4 +34,4 @@ for file in $linkfiles; do
   ln -s $dir/$file ~/$file
 done
 
-for dir in $createdirs; do [ ! -e "$dir" ]  && mkdir $dir; done
+for dir in $createdirs; do [ ! -e "$dir" ]  && mkdir ~/$dir; done
