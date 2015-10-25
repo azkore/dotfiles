@@ -115,10 +115,12 @@ set cpoptions-=<
 set directory=~/.vimswap/,~/tmp,/var/tmp,/tmp "swapfiles
 set backup                      " backups are nice ...
 set backupdir=~/.vimbackup
-set undodir=~/.vimundo
-set undofile                "so is persistent undo ...
-set undolevels=10000         "maximum number of changes that can be undone
-set undoreload=10000        "maximum number lines to save for undo on a buffer reload
+if has('persistent_undo')
+  set undodir=~/.vimundo
+  set undofile                "so is persistent undo ...
+  set undolevels=10000         "maximum number of changes that can be undone
+  set undoreload=10000        "maximum number lines to save for undo on a buffer reload
+endif
 set viewdir=~/.vim/views
 "au BufWinLeave *.* silent! mkview  "make vim save view (state) (folds, cursor, etc)
 "au BufWinEnter *.* silent! loadview "make vim load view (state) (folds, cursor, etc)
