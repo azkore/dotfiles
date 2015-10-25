@@ -12,4 +12,5 @@ export AUTOSSH_FIRST_POLL=60
 #hostname=$(hostname)
 #printf "\033];%s\07\n" "hello world"
 printf "\033];%s\07\n" ghost
+alias tmux="tmux -u"
 cd
