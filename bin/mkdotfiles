@@ -1,1 +1,1 @@
-/usr/bin/ssh $@ (apt-get install -y git zsh mc ) || ( yum install -y git ) &&  test -e ~/dotfiles && ( cd dotfiles; git pull ) || ( git clone --recursive https://github.com/azkore/dotfiles ~/dotfiles) &&  ~/dotfiles/bin/linkdotfiles.sh
+/usr/bin/ssh $@ "(apt-get install -y git zsh mc ) || ( yum install -y git ) &&  test -e ~/dotfiles && ( cd dotfiles; git pull ) || ( git clone --recursive https://github.com/azkore/dotfiles ~/dotfiles) &&  ~/dotfiles/bin/linkdotfiles.sh"
