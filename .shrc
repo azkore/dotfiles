@@ -1,0 +1,70 @@
+#rc file for all shells
+#umask 002
+ulimit -c 0
+#set -o vi
+eval `/usr/bin/dircolors`
+export PATH=~/bin/:$PATH
+
+export GITHUB_USER="azkore"
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+export PAGER="most"
+export EDITOR="vim"
+export CLICOLOR=1
+
+
+## emacsing
+if [ eterm = $TERM ]; then
+    os=`uname`
+    host=`hostname`
+    date=`date`
+    user=`whoami`
+
+    echo --------------------------------------------------------------
+    echo Hello $user
+    echo Today is $date
+    echo We are on $host running $os under Emacs term mode
+    echo --------------------------------------------------------------
+
+    export EDITOR=egnuclient
+
+##    cwd_hack='$PWD'
+##    host_hack='$host'
+##    user_hack='$user'
+
+##  Notice that the ^[ character is an ESC, not two chars.  You can
+##  get it in various ways, for example by typing
+##  echo -e '\033' > escape.file
+##  or by using your favourite editor
+
+##		foreach temp (cd pushd)
+##			alias $temp="$temp \!* ; echo 'AnSiTc' $cwd_hack"
+##		end
+##  		alias popd='popd ;echo "AnSiTc" $PWD'
+
+##  Every command that can modify the user/host/directory should be aliased
+##  as follows for the tracking mechanism to work.
+
+##       foreach temp ( rlogin telnet rsh sh ksh csh tcsh zsh bash tcl su sudo )
+##			alias $temp="$temp \!* ; echo 'AnSiTh' $host_hack ; \
+##					echo 'AnSiTu' $user_hack ;echo 'AnSiTc' $cwd_hack"
+##		end
+
+##Start up & use color ls
+
+    alias emhost='echo "AnSiTh" $host'
+    alias emuser='echo "AnSiTu" $user'
+    alias emcd='echo "AnSiTc" $PWD'
+
+##some housekeeping
+
+#unset cwd_hack
+#unset host_hack
+#unset user_hack
+#unset temp
+
+##	eval `/bin/dircolors /home/marco/.emacs_dircolors`
+#Let's not clutter user space
+    unset os
+    unset date
+fi

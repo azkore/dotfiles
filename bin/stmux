@@ -1,0 +1,4 @@
+#tmux new-window -n $1 "ssh $1"
+export LC_TMUX=YES
+#tmux rename-window $1 && 
+exec ssh -Y $1

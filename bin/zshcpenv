@@ -1,0 +1,1 @@
+scp -r .mc .screenrc .zshcompl .zshrc .zshrc.skel.$2 .shaliases .shrc .oh-my-zsh .tmux* $1:

@@ -1,0 +1,16 @@
+tmux bind-key -n C-1 select-window -t 1
+tmux bind-key -n C-2 select-window -t 2
+tmux bind-key -n C-3 select-window -t 3
+tmux bind-key -n C-4 select-window -t 4
+tmux bind-key -n C-5 select-window -t 5
+tmux bind-key -n C-5 select-window -t 6
+tmux bind-key -n C-7 select-window -t 7
+tmux bind-key -n C-8 select-window -t 8
+tmux bind-key -n C-9 select-window -t 9
+
+tmux bind-key -n C-Left select-window -p
+tmux bind-key -n C-Right select-window -n
+
+tmux bind-key -n C-S-Left swap-window -t -1
+tmux bind-key -n C-S-Right swap-window -t +1
+

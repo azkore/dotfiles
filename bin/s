@@ -1,0 +1,2 @@
+host=`echo $1 | sed s/.\*@//g`
+exec screen -t $host ssh -X -t $1 screen -D -RR 

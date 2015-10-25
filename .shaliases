@@ -1,0 +1,70 @@
+#ALIASES
+alias mv='nocorrect mv -i'       # no spelling correction on mv
+alias cp='nocorrect cp -i'       # no spelling correction on cp
+alias rm='nocorrect rm -i'       # no spelling correction on rm
+alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
+alias l='ls'
+alias p='cd -'
+alias u="cd .."
+alias j=jobs
+alias pu=pushd
+alias po=popd
+#alias d='dirs -v'
+alias h=history
+#alias grep=egrep
+alias ll='ls -l'
+alias la='ls -a'
+#alias ls='ls -F --color=auto'
+alias l.='ls -d .[a-zA-Z]*'
+alias lsd='ls -ld *(-/DN)'
+alias aptg='sudo apt-get'
+alias aptc='apt-cache'
+alias acse='apt-cache search'
+alias acsh='apt-cache show'
+alias agi='sudo apt-get install'
+alias agu='sudo apt-get update;sudo apt-get dist-upgrade'
+alias undelete='recover'
+alias evim='vim -y -U ~/.evimrc'
+alias sget='socksify wget -c'
+alias rsget='socksify wget -r -np --mirror'
+alias others='fc -RI'
+
+#alias vi='gnuclient -nw'
+#alias vim='em'
+#alias em='egnuclient'
+alias rpml='rpm -q --queryformat "[%{FILEMODES:perms} %{FILENAMES}\n]"'
+alias rpmg='rpm -qa|grep -i'
+alias mc='mc -d'
+alias clearcache='sudo rm /var/cache/apt/archives/*.rpm'
+#alias make='/usr/local/bin/prettymake'
+#alias gq='HOME=~/tmp gq'
+alias vnn='em ~/.nnfsrc'
+alias cdm='mount /mnt/cdrom'
+alias cdu='umount /mnt/cdrom'
+alias nnfs='sudo rootnnfs2 -x'
+alias gmplayer='gmplayer -nofs'
+#alias s='screen'
+alias c='cd'
+alias m='mpg123 -Cv'
+
+#alias man='LC_ALL=C man'
+
+alias wine='LD_LIBRARY_PATH=/usr/lib/wine wine'
+#alias emacs='LC_ALL=ru_RU.KOI8-R /usr/bin/emacs'
+
+alias d=dict
+alias a='~/wrk/archmage/archmage -p3456'
+alias acr=acroread
+alias stop='killall -TSTP'
+alias cont='killall -CONT'
+alias dired='egnudoit "(progn (select-frame (make-frame-on-display \"$DISPLAY\")) (dired \"$(PWD)\"))"'
+alias x='source /opt/bin/x'
+
+alias secm='mount /home/az/crypt'
+alias secu='umount /home/az/crypt'
+
+if [ x`uname` = xLinux ]; then alias ls='ls -F --color=auto'; fi
+alias s='exec stmux'
+#alias man='PAGER='\''less -X'\'' man' # Don’t clear the screen after quitting a manual page
+#ssh() { printf '\033k'$1'\033\\'; /usr/bin/ssh $1 ;}
+ssh() { printf '\033k'${@: -1}'\033\\'; /usr/bin/ssh ${@: -1} ;}

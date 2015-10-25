@@ -1,0 +1,9 @@
+#sudo ip tunnel add mc0n8 mode gre remote 172.18.82.133 local 172.18.12.111 ttl 255
+#sudo ip link set mc0n8 up
+#sudo ip addr add 192.168.55.2/24 dev mc0n8
+#sudo route add -net 192.168.56.0/24 gw 192.168.55.1
+
+sudo ip tunnel add labtun mode gre remote 172.18.170.84 local 172.18.12.111 ttl 255
+sudo ip link set labtun up
+sudo ip addr add 192.168.50.2/30 dev labtun
+sudo route add -net 10.0.0.0/16 gw 192.168.50.1

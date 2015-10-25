@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='scp://tpi84/'
+let g:netrw_dirhist_2='scp://tpi84/puppet-manifests/'
+let g:netrw_dirhist_3='scp://tpi84/puppet-manifests/hiera/'
+let g:netrw_dirhist_4='scp://tpi84/puppet-manifests/hiera/locations/'
+let g:netrw_dirhist_5='scp://tpi84/puppet-manifests/manifests/'

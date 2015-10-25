@@ -1,0 +1,6 @@
+#prefix=$(echo -n `tmux show-options -g prefix` | tail -c -1)
+#tmux unbind C-$prefix
+#tmux unbind $prefix
+tmux set prefix C-$1
+tmux bind-key $1 send-prefix
+tmux bind-key C-$1 last-window

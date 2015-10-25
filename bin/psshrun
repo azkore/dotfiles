@@ -1,0 +1,6 @@
+ROLE=$1
+shift
+CMD=$@
+NODES=`fuel node | grep $ROLE | cut -f5 -d'|'|sed 's/^/ -H /' | xargs echo`
+#dockerctl shell astute mco rpc -v $NODES execute_shell_command execute cmd="$CMD"
+pssh $NODES -P $CMD

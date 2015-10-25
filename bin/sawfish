@@ -1,0 +1,3 @@
+#xterm
+#/usr/bin/sawfish
+/usr/local/bin/sawfish --5-buttons $@
