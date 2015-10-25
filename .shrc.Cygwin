@@ -1,0 +1,15 @@
+eval `/usr/bin/dircolors`
+#export TERM=xterm-256color
+eval $(ssh-pageant -ra $TEMP/.ssh-pageant)
+export DISPLAY=127.0.0.1:0.0
+export AUTOSSH_PORT=0
+#export AUTOSSH_DEBUG=1
+export AUTOSSH_MAXLIFETIME=9999999999
+export AUTOSSH_POLL=30
+export AUTOSSH_GATETIME=30
+export AUTOSSH_FIRST_POLL=60
+#why it doesn't work?
+#hostname=$(hostname)
+#printf "\033];%s\07\n" "hello world"
+printf "\033];%s\07\n" ghost
+cd
