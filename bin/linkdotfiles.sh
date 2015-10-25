@@ -29,9 +29,9 @@ echo "...done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $linkfiles; do
   echo "Moving any existing dotfiles from ~ to $olddir"
-  echo mv ~/$file ~/dotfiles_old/
+  mv ~/$file ~/dotfiles_old/
   echo "Creating symlink to $file in home directory."
-  echo ln -s $dir/$file ~/$file
+  ln -s $dir/$file ~/$file
 done
 
 for dir in $createdirs; do [ ! -e "$dir" ]  && mkdir $dir; done
