@@ -8,7 +8,8 @@ export PATH=~/bin/:$PATH
 export GITHUB_USER="azkore"
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
-export PAGER="most"
+#export PAGER="most"
+export PAGER="less"
 export EDITOR="vim"
 export CLICOLOR=1
 

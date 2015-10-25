@@ -102,7 +102,6 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 #set term title to hostname
 print -Pn "\e]2;`hostname`\a"
 
-export PAGER="most"
 #zsh global aliases
 alias -g L="|less"
 alias -g H="|head"
