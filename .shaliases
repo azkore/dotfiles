@@ -67,4 +67,4 @@ if [ x`uname` = xLinux ]; then alias ls='ls -F --color=auto'; fi
 alias s='exec stmux'
 #alias man='PAGER='\''less -X'\'' man' # Don’t clear the screen after quitting a manual page
 #ssh() { printf '\033k'$1'\033\\'; /usr/bin/ssh $1 ;}
-ssh() { printf '\033k'${@: -1}'\033\\'; /usr/bin/ssh ${@: -1} ;}
+ssh() { printf '\033k'${@: -1}'\033\\'; /usr/bin/ssh $@ ;}
