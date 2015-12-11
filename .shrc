@@ -9,7 +9,7 @@ export GITHUB_USER="azkore"
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
 #export PAGER="most"
-export PAGER="less"
+export PAGER="less"; unset LESS
 export EDITOR="vim"
 export CLICOLOR=1
 
@@ -70,6 +70,6 @@ if [ eterm = $TERM ]; then
     unset date
 fi
 
-ssh() { printf '\033k'${@: -1}'\033\\'; /usr/bin/ssh ${@: -1} ;}
-
 test -f ~/.shrc.`uname -o` && source ~/.shrc.`uname -o`
+
+export TMUX_VERSION=$(tmux -V | cut -f2 -d' ')
