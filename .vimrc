@@ -36,6 +36,7 @@ Plugin 'mitsuhiko/vim-python-combined' " Combined Python 2/3 for Vim
 
 Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
+Plugin 'rust-lang/rust.vim'
 
 
 call vundle#end()               " required
