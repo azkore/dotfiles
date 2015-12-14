@@ -270,6 +270,7 @@ let g:jedi#popup_select_first = 0
 "=====================================================
 " User hotkeys
 "=====================================================
+nnoremap <leader>\ @:
 " ConqueTerm
 " запуск интерпретатора на F5
 nnoremap <F5> :ConqueTermSplit ipython<CR>
