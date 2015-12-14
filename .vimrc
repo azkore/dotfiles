@@ -17,6 +17,7 @@ Plugin 'bling/vim-airline'          " Lean & mean status/tabline for vim
 Plugin 'fisadev/FixedTaskList.vim'  " Pending tasks list
 Plugin 'rosenfeld/conque-term'      " Consoles as buffers
 Plugin 'tpope/vim-surround'         " Parentheses, brackets, quotes, XML tags, and more
+Plugin 'webapi-vim'
 
 "--------------=== Snippets support ===---------------
 Plugin 'garbas/vim-snipmate'          " Snippets manager
