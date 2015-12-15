@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/rust.vim"]
 	path = .vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule ".vim/bundle/nimrod.vim"]
+	path = .vim/bundle/nimrod.vim
+	url = https://github.com/zah/nimrod.vim/

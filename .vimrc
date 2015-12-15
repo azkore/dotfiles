@@ -17,7 +17,6 @@ Plugin 'bling/vim-airline'          " Lean & mean status/tabline for vim
 Plugin 'fisadev/FixedTaskList.vim'  " Pending tasks list
 Plugin 'rosenfeld/conque-term'      " Consoles as buffers
 Plugin 'tpope/vim-surround'         " Parentheses, brackets, quotes, XML tags, and more
-Plugin 'webapi-vim'
 
 "--------------=== Snippets support ===---------------
 Plugin 'garbas/vim-snipmate'          " Snippets manager
@@ -38,6 +37,7 @@ Plugin 'mitsuhiko/vim-python-combined' " Combined Python 2/3 for Vim
 Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'rust-lang/rust.vim'
+Bundle 'zah/nimrod.vim'
 
 
 call vundle#end()               " required
@@ -1633,4 +1633,19 @@ endif
 "    map <Leader>= <C-w>=
 "" }}}
 "" }}}
+fun! JumpToDef()
+  if exists("*GotoDefinition_" . &filetype)
+    call GotoDefinition_{&filetype}()
+  else
+    exe "norm! \<C-]>"
+  endif
+endf
+
+" Jump to tag
+nn <M-g> :call JumpToDef()<cr>
+ino <M-g> <esc>:call JumpToDef()<cr>i
+
+autocmd FileType nim map <buffer> <F11> :!nimrun %<Enter>
+autocmd FileType nim map! <buffer> <F11> <Esc>:!nimrun %<Enter>i
+
 " vim: set foldlevel=0 foldmethod=marker :
