@@ -1655,6 +1655,10 @@ autocmd FileType nim map <buffer> <F11> :w<Enter>:!nimrun %<Cr>
 autocmd FileType nim map! <buffer> <F11> <C-o>:w<Enter><C-o>:!nimrun %<Cr>
 autocmd FileType nim map <buffer> <Leader>c :w<Enter>:!nimrun %<Cr>
 autocmd FileType nim map! <buffer> <Leader>c <C-o>:w<Enter><C-o>:!nimrun %<Cr>
+autocmd FileType c map <buffer> <F11> :w<Enter>:!c11sh %<Cr>
+autocmd FileType c map! <buffer> <F11> <C-o>:w<Enter><C-o>:!c11sh %<Cr>
+autocmd FileType c map <buffer> <Leader>c :w<Enter>:!c11sh %<Cr>
+autocmd FileType c map! <buffer> <Leader>c <C-o>:w<Enter><C-o>:!c11sh %<Cr>
 
 set t_ut=
 let g:colorscheme_switcher_define_mappings=0
