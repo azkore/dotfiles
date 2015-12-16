@@ -369,12 +369,16 @@ imap <F7> <C-O>:bn<CR>
 "F8 - wipeout buffer
 map <F8> :bwipe<CR>
 imap <F8> <C-O>:bwipe<CR>
+map <Leader><Space> :bwipe<CR>
+imap <Leader><Space> <C-O>:bwipe<CR>
 
 "F9 - :make
-map <F9> :w<CR>:make<CR>
-imap <F9> <esc>:w<CR>:make<CR>i
+map <F9> :w<CR>:silent make <bar> copen<CR><C-l>
+imap <F9> <C-o>:w<CR><C-o>:silent make <bar> copen<CR><C-o><C-l>
+map <Leader>m :w<CR>:silent make <bar> copen<CR><C-l>
+imap <Leader>m <C-o>:w<CR><C-o>:silent make <bar> copen<CR><C-o><C-l>
 
-nmap <Leader>M <ESC>:wa<CR>:make!<CR>
+"nmap <Leader>M <ESC>:wa<CR>:make!<CR>
 
 "F10 - menu
 map <F10> :emenu<C-Z>
@@ -1647,8 +1651,10 @@ endf
 nn <M-g> :call JumpToDef()<cr>
 ino <M-g> <esc>:call JumpToDef()<cr>i
 
-autocmd FileType nim map <buffer> <F11> :w<Enter>:!nimrun %<Enter>
-autocmd FileType nim map! <buffer> <F11> <Esc>:w<Enter>:!nimrun %<Enter>
+autocmd FileType nim map <buffer> <F11> :w<Enter>:!nimrun %<Cr>
+autocmd FileType nim map! <buffer> <F11> <C-o>:w<Enter><C-o>:!nimrun %<Cr>
+autocmd FileType nim map <buffer> <Leader>c :w<Enter>:!nimrun %<Cr>
+autocmd FileType nim map! <buffer> <Leader>c <C-o>:w<Enter><C-o>:!nimrun %<Cr>
 
 set t_ut=
 let g:colorscheme_switcher_define_mappings=0
