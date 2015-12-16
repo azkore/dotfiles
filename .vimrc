@@ -109,7 +109,7 @@ set confirm
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set shell=zsh " shell to start with !
 "clipboard is unnamed reguster
-if has ("win32")
+if has ("windows")
     set clipboard=unnamed
 else
     set clipboard=unnamedplus
@@ -1651,4 +1651,5 @@ autocmd FileType nim map <buffer> <F11> :w<Enter>:!nimrun %<Enter>
 autocmd FileType nim map! <buffer> <F11> <Esc>:w<Enter>:!nimrun %<Enter>
 
 set t_ut=
+let g:colorscheme_switcher_define_mappings=0
 " vim: set foldlevel=0 foldmethod=marker :
