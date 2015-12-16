@@ -16,3 +16,12 @@
 [submodule ".vim/bundle/nimrod.vim"]
 	path = .vim/bundle/nimrod.vim
 	url = https://github.com/zah/nimrod.vim/
+[submodule ".vim/bundle/vim-colorscheme-switcher"]
+	path = .vim/bundle/vim-colorscheme-switcher
+	url = https://github.com/xolox/vim-colorscheme-switcher
+[submodule ".vim/bundle/vim-colorschemes"]
+	path = .vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
+[submodule ".vim/bundle/vim-misc"]
+	path = .vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc

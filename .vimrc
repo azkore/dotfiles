@@ -38,6 +38,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'rust-lang/rust.vim'
 Bundle 'zah/nimrod.vim'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-colorscheme-switcher'
 
 
 call vundle#end()               " required
@@ -1648,4 +1650,5 @@ ino <M-g> <esc>:call JumpToDef()<cr>i
 autocmd FileType nim map <buffer> <F11> :w<Enter>:!nimrun %<Enter>
 autocmd FileType nim map! <buffer> <F11> <Esc>:w<Enter>:!nimrun %<Enter>
 
+set t_ut=
 " vim: set foldlevel=0 foldmethod=marker :
