@@ -1652,13 +1652,16 @@ nn <M-g> :call JumpToDef()<cr>
 ino <M-g> <esc>:call JumpToDef()<cr>i
 
 autocmd FileType nim map <buffer> <F11> :w<Enter>:!nimrun %<Cr>
-autocmd FileType nim map! <buffer> <F11> <C-o>:w<Enter><C-o>:!nimrun %<Cr>
+autocmd FileType nim imap <buffer> <F11> <C-o>:w<Enter><C-o>:!nimrun %<Cr>
 autocmd FileType nim map <buffer> <Leader>c :w<Enter>:!nimrun %<Cr>
-autocmd FileType nim map! <buffer> <Leader>c <C-o>:w<Enter><C-o>:!nimrun %<Cr>
+autocmd FileType nim imap <buffer> <Leader>c <C-o>:w<Enter><C-o>:!nimrun %<Cr>
 autocmd FileType c map <buffer> <F11> :w<Enter>:!c11sh %<Cr>
-autocmd FileType c map! <buffer> <F11> <C-o>:w<Enter><C-o>:!c11sh %<Cr>
+autocmd FileType c imap <buffer> <F11> <C-o>:w<Enter><C-o>:!c11sh %<Cr>
 autocmd FileType c map <buffer> <Leader>c :w<Enter>:!c11sh %<Cr>
-autocmd FileType c map! <buffer> <Leader>c <C-o>:w<Enter><C-o>:!c11sh %<Cr>
+autocmd FileType c imap <buffer> <Leader>c <C-o>:w<Enter><C-o>:!c11sh %<Cr>
+
+set autowrite
+imap <C-z> <C-o>:suspend<CR>
 
 set t_ut=
 let g:colorscheme_switcher_define_mappings=0
