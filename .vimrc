@@ -1645,7 +1645,7 @@ endf
 nn <M-g> :call JumpToDef()<cr>
 ino <M-g> <esc>:call JumpToDef()<cr>i
 
-autocmd FileType nim map <buffer> <F11> :!nimrun %<Enter>
-autocmd FileType nim map! <buffer> <F11> <Esc>:!nimrun %<Enter>i
+autocmd FileType nim map <buffer> <F11> :w<Enter>:!nimrun %<Enter>
+autocmd FileType nim map! <buffer> <F11> <Esc>:w<Enter>:!nimrun %<Enter>
 
 " vim: set foldlevel=0 foldmethod=marker :
