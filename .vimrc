@@ -1665,4 +1665,5 @@ imap <C-z> <C-o>:suspend<CR>
 
 set t_ut=
 let g:colorscheme_switcher_define_mappings=0
+set cursorline
 " vim: set foldlevel=0 foldmethod=marker :
