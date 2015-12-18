@@ -1662,6 +1662,8 @@ autocmd FileType c map <buffer> <Leader>c :w !c11sh -
 autocmd FileType c imap <buffer> <Leader>c <C-o>:w !c11sh - 
 
 autocmd FileType nim :colorscheme summerfruit256
+autocmd Filetype nim :hi CursorLine term=underline cterm=underline ctermbg=none guibg=none
+autocmd Filetype nim :hi CursorLineNR term=underline cterm=underline,bold ctermbg=32 ctermfg=white
 
 set autowrite
 imap <C-z> <C-o>:suspend<CR>
