@@ -1,4 +1,5 @@
 set nocompatible "be iMproved
+set t_Co=256
 "Vundle settings {{{
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -1659,6 +1660,8 @@ autocmd FileType c map <buffer> <F11> :w !c11sh -<Cr>
 autocmd FileType c imap <buffer> <F11> <C-o>:w !c11sh -<Cr>
 autocmd FileType c map <buffer> <Leader>c :w !c11sh - 
 autocmd FileType c imap <buffer> <Leader>c <C-o>:w !c11sh - 
+
+autocmd FileType nim :colorscheme summerfruit256
 
 set autowrite
 imap <C-z> <C-o>:suspend<CR>
