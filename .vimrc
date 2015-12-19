@@ -41,6 +41,7 @@ Plugin 'rust-lang/rust.vim'
 Bundle 'zah/nimrod.vim'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-colorscheme-switcher'
+Bundle 'tpope/vim-unimpaired'
 
 
 call vundle#end()               " required
@@ -330,6 +331,16 @@ autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 "}}}
 "Plugins{{{
 let g:nerdtree_tabs_open_on_gui_startup=0
+
+"syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 "let g:snips_trigger_key='<c-space>'
 "}}}
 "Mappings {{{
@@ -1654,12 +1665,12 @@ ino <M-g> <esc>:call JumpToDef()<cr>i
 
 autocmd FileType nim map <buffer> <F11> :w !nimrun -<Cr>
 autocmd FileType nim imap <buffer> <F11> <C-o>:w !nimrun -<Cr>
-autocmd FileType nim map <buffer> <Leader>c :w !nimrun - 
-autocmd FileType nim imap <buffer> <Leader>c <C-o>:w !nimrun - 
+autocmd FileType nim map <buffer> <Leader>c :w !nimrun - <Cr>
+autocmd FileType nim imap <buffer> <Leader>c <C-o>:w !nimrun - <Cr>
 autocmd FileType c map <buffer> <F11> :w !c11sh -<Cr>
 autocmd FileType c imap <buffer> <F11> <C-o>:w !c11sh -<Cr>
-autocmd FileType c map <buffer> <Leader>c :w !c11sh - 
-autocmd FileType c imap <buffer> <Leader>c <C-o>:w !c11sh - 
+autocmd FileType c map <buffer> <Leader>c :w !c11sh - <Cr>
+autocmd FileType c imap <buffer> <Leader>c <C-o>:w !c11sh - <Cr>
 
 autocmd FileType nim :colorscheme summerfruit256
 autocmd Filetype nim :hi CursorLine term=underline cterm=underline ctermbg=none guibg=none
