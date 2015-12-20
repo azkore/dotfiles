@@ -4,30 +4,3 @@
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
-[submodule ".vim/bundle/vim-addon-mw-utils"]
-	path = .vim/bundle/vim-addon-mw-utils
-	url = https://github.com/marcweber/vim-addon-mw-utils
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
-[submodule ".vim/bundle/rust.vim"]
-	path = .vim/bundle/rust.vim
-	url = https://github.com/rust-lang/rust.vim
-[submodule ".vim/bundle/nimrod.vim"]
-	path = .vim/bundle/nimrod.vim
-	url = https://github.com/zah/nimrod.vim/
-[submodule ".vim/bundle/vim-colorscheme-switcher"]
-	path = .vim/bundle/vim-colorscheme-switcher
-	url = https://github.com/xolox/vim-colorscheme-switcher
-[submodule ".vim/bundle/vim-colorschemes"]
-	path = .vim/bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes
-[submodule ".vim/bundle/vim-misc"]
-	path = .vim/bundle/vim-misc
-	url = https://github.com/xolox/vim-misc
-[submodule ".vim/bundle/vim-unimpaired"]
-	path = .vim/bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
