@@ -6,7 +6,7 @@ eval `/usr/bin/dircolors`
 export PATH=~/bin/:~/.local/bin/:$PATH
 
 export GITHUB_USER="azkore"
-export GREP_OPTIONS='--color=auto'
+#export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
 #export PAGER="most"
 export PAGER="less"; unset LESS
