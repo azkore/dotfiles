@@ -115,5 +115,7 @@ alias -g O="2>&1"
 #bindkey -M viins '.' insert-last-word
 #bindkey -M vicmd '.' insert-last-word
 
+TF_ALIAS=fuck alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+
 #no manual rehash
 zstyle ':completion:*' rehash true
