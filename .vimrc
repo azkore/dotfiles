@@ -69,6 +69,8 @@ else
    set background=dark
 endif
 
+
+
 set backspace=indent,eol,start
 set mouse=a
 set ttyfast
@@ -1674,9 +1676,9 @@ autocmd FileType c imap <buffer> <F11> <C-o>:w !c11sh -<Cr>
 autocmd FileType c map <buffer> <Leader>c :w !c11sh - <Cr>
 autocmd FileType c imap <buffer> <Leader>c <C-o>:w !c11sh - <Cr>
 
-autocmd FileType nim :colorscheme summerfruit256
-autocmd Filetype nim :hi CursorLine term=underline cterm=underline ctermbg=none guibg=none
-autocmd Filetype nim :hi CursorLineNR term=underline cterm=underline,bold ctermbg=32 ctermfg=white
+autocmd FileType nim,c :colorscheme summerfruit256
+autocmd Filetype nim,c :hi CursorLine term=underline cterm=underline gui=underline ctermbg=NONE guibg=NONE
+autocmd Filetype nim,c :hi CursorLineNR term=underline cterm=underline,bold gui=underline ctermbg=32 ctermfg=white
 
 set autowrite
 imap <C-z> <C-o>:suspend<CR>
@@ -1684,4 +1686,7 @@ imap <C-z> <C-o>:suspend<CR>
 set t_ut=
 let g:colorscheme_switcher_define_mappings=0
 set cursorline
+hi CursorLine term=underline cterm=underline gui=underline ctermbg=NONE guibg=NONE
+hi CursorLineNR term=underline cterm=underline,bold gui=underline ctermbg=NONE ctermfg=NONE
+
 " vim: set foldlevel=0 foldmethod=marker :
