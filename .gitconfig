@@ -1,0 +1,9 @@
+[push]
+	default = simple
+[user]
+	name = Eugene Korekin
+	email = azcore@gmail.com
+[gui]
+	recentrepo = /home/az/git/lunches/RickUmaliVanityWebsite
+[color]
+	ui = auto
