@@ -109,13 +109,18 @@ alias -g T="|tail"
 alias -g G="|grep"
 alias -g N="&>/dev/null&"
 alias -g O="2>&1"
-#set -o vi
-#bindkey -M viins '^R' history-incremental-search-backward
-#bindkey -M vicmd '^R' history-incremental-search-backward
-#bindkey -M viins '.' insert-last-word
-#bindkey -M vicmd '.' insert-last-word
+
+set -o vi
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
+autoload -Uz history-beginning-search-menu; zle -N history-beginning-search-menu
+bindkey -M viins '^P' history-beginning-search-menu
+bindkey -M vicmd '^P' history-beginning-search-menu
+bindkey -M viins '.' insert-last-word
+bindkey -M vicmd '.' insert-last-word
 
 bindkey \^U backward-kill-line
+bindkey \^P history-beginning-search-menu
 
 TF_ALIAS=fuck alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
