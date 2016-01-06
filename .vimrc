@@ -1675,6 +1675,8 @@ autocmd FileType c map <buffer> <F11> :w !c11sh -<Cr>
 autocmd FileType c imap <buffer> <F11> <C-o>:w !c11sh -<Cr>
 autocmd FileType c map <buffer> <Leader>c :w !c11sh - <Cr>
 autocmd FileType c imap <buffer> <Leader>c <C-o>:w !c11sh - <Cr>
+map <Leader>e :Errors<Cr>
+imap <Leader>e <C-o>:Errors<Cr>
 
 autocmd FileType nim,c :colorscheme summerfruit256
 autocmd Filetype nim,c :hi CursorLine term=underline cterm=underline gui=underline ctermbg=NONE guibg=NONE
