@@ -110,7 +110,7 @@ alias -g G="|grep"
 alias -g N="&>/dev/null&"
 alias -g O="2>&1"
 
-set -o vi
+#set -o vi
 bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M vicmd '^R' history-incremental-search-backward
 autoload -Uz history-beginning-search-menu; zle -N history-beginning-search-menu
