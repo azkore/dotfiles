@@ -1677,12 +1677,17 @@ autocmd FileType c map <buffer> <F11> :w !c11sh -<Cr>
 autocmd FileType c imap <buffer> <F11> <C-o>:w !c11sh -<Cr>
 autocmd FileType c map <buffer> <Leader>c :w !c11sh - <Cr>
 autocmd FileType c imap <buffer> <Leader>c <C-o>:w !c11sh - <Cr>
+
+autocmd FileType go set nosmarttab
+autocmd FileType go set noexpandtab
+autocmd FileType go set listchars=tab:\ \ ,trail:.,extends:#,nbsp:. 
+
 map <Leader>e :Errors<Cr>
 imap <Leader>e <C-o>:Errors<Cr>
 
-autocmd FileType nim,c :colorscheme summerfruit256
-autocmd Filetype nim,c :hi CursorLine term=underline cterm=underline gui=underline ctermbg=NONE guibg=NONE
-autocmd Filetype nim,c :hi CursorLineNR term=underline cterm=underline,bold gui=underline ctermbg=32 ctermfg=white
+autocmd FileType nim,c,go :colorscheme summerfruit256
+autocmd Filetype nim,c,go :hi CursorLine term=underline cterm=underline gui=underline ctermbg=NONE guibg=NONE
+autocmd Filetype nim,c,go :hi CursorLineNR term=underline cterm=underline,bold gui=underline ctermbg=32 ctermfg=white
 
 set autowrite
 imap <C-z> <C-o>:suspend<CR>
