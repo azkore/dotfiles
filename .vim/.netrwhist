@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='scp://tpi84/'
-let g:netrw_dirhist_2='scp://tpi84/puppet-manifests/'
-let g:netrw_dirhist_3='scp://tpi84/puppet-manifests/hiera/'
-let g:netrw_dirhist_4='scp://tpi84/puppet-manifests/hiera/locations/'
-let g:netrw_dirhist_5='scp://tpi84/puppet-manifests/manifests/'
-let g:netrw_dirhist_6='/home/az/learn/gobook/src/gopl.io'
-let g:netrw_dirhist_7='/home/az/learn/gobook/src/gopl.io/ch1'
-let g:netrw_dirhist_8='/home/az/learn/gobook/src/gopl.io/ch1/helloworld'
-let g:netrw_dirhist_9='/home/az/.local/lib/python2.7/site-packages/regetron'
+let g:netrw_dirhist_cnt =0

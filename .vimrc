@@ -15,6 +15,7 @@ Plugin 'majutsushi/tagbar'    " Class/module browser
 
 "------------------=== Other ===----------------------
 Plugin 'bling/vim-airline'          " Lean & mean status/tabline for vim
+Plugin 'vim-airline/vim-airline-themes'          
 Plugin 'fisadev/FixedTaskList.vim'  " Pending tasks list
 Plugin 'rosenfeld/conque-term'      " Consoles as buffers
 Plugin 'tpope/vim-surround'         " Parentheses, brackets, quotes, XML tags, and more
@@ -42,6 +43,7 @@ Bundle 'zah/nimrod.vim'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-colorscheme-switcher'
 Bundle 'tpope/vim-unimpaired'
+Plugin 'ervandew/supertab'
 
 
 call vundle#end()               " required
@@ -288,7 +290,7 @@ let g:ConqueTerm_CloseOnEnd = 0
 autocmd FileType python map <buffer> <leader>8 :PymodeLint<CR>
 
 " автокомплит через <Ctrl+Space>
-inoremap <C-space> <C-x><C-o>
+" inoremap <C-space> <C-x><C-o>
 
 " переключение между синтаксисами
 nnoremap <leader>Th :set ft=htmljinja<CR>
