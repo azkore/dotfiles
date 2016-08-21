@@ -100,7 +100,7 @@ scriptencoding utf-8
 set laststatus=2     " always display statusbar
 set incsearch	     " incremental search
 set hlsearch	     " highlight search terms
-set nu	             " line numbers on
+"set nu	             " line numbers on
 set scrolloff=5      " minimum lines to keep above and below cursor
 
 "set noswapfile 	     " no swap files
@@ -142,7 +142,7 @@ set showmode                    " display the current mode
 set showcmd                     " show partial commands in status line and
 set showmatch                   " show matching brackets/parenthesis
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
-set nu                          " Line numbers on
+" set nu                          " Line numbers on
 set incsearch                   " find as you type search
 set hlsearch                    " highlight search terms
 set winminheight=0              " windows can be 0 line high
