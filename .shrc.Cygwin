@@ -15,4 +15,6 @@ export AUTOSSH_FIRST_POLL=60
 printf "\033];%s\07\n" ghost
 alias tmux="tmux -u"
 alias gcloud=gcloud.cmd
+#use cygwin git in cygwin
+alias git=/usr/bin/git
 cd
