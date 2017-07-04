@@ -1,5 +1,7 @@
 set nocompatible "be iMproved
-set t_Co=256
+if &term == "screen-256color"
+    set t_Co=256
+endif
 "Vundle settings {{{
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -1694,8 +1696,10 @@ imap <C-z> <C-o>:suspend<CR>
 
 set t_ut=
 let g:colorscheme_switcher_define_mappings=0
+if &term != "win32"
 set cursorline
 hi CursorLine term=underline cterm=underline gui=underline ctermbg=NONE guibg=NONE
 hi CursorLineNR term=underline cterm=underline,bold gui=underline ctermbg=NONE ctermfg=NONE
+endif
 
 " vim: set foldlevel=0 foldmethod=marker :

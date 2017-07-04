@@ -54,6 +54,9 @@
 " Quit if the user doesn't want or need us or is missing the gui feature.  We
 " need +gui to be able to check the gui color settings; vim doesn't bother to
 " store them if it is not built with +gui.
+if &term == 'win32'
+	finish
+endif
 if exists('g:CSApprox_loaded')
   finish
 elseif !has('gui') && v:version < 703
