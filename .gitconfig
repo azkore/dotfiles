@@ -8,3 +8,5 @@
 [alias]
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	scopelist = "! f() { echo 'global settings'; git config --global --get-regexp $1; echo 'local settings'; git config --get-regexp $1; }; f"
+[core]
+  fscache = true
