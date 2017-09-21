@@ -87,6 +87,10 @@ source ~/.shaliases
 PROMPT="%n@%m %3~ %(!.#.$) "    # default prompt
 HISTSIZE=100000
 SAVEHIST=100000
+# correct commands but not args
+unsetopt correct_all
+setopt correct
+
 setopt histexpiredupsfirst #duplicate history lines are expired firs
 setopt histfindnodups #no duplicate history lines found
 #setopt histignorealldups #ignore all duplicated history lines
