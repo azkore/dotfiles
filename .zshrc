@@ -131,3 +131,5 @@ TF_ALIAS=fuck alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 #no manual rehash
 zstyle ':completion:*' rehash true
 test -f /usr/local/bin/aws_zsh_completer.sh && source /usr/local/bin/aws_zsh_completer.sh
+
+test -f ~/.zshrc.`uname` && source ~/.zshrc.`uname`
