@@ -91,7 +91,7 @@ filetype plugin indent on
 "autocmd vimenter * NERDTree
 "autocmd vimenter * if !argc() | NERDTree | endif
 
-tab sball "open each cmdline arg in own tab
+"tab sball "open each cmdline arg in own tab
 set switchbuf=usetab " consider windows and tabs when switching buffers
 
 set visualbell t_vb=
