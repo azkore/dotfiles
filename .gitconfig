@@ -10,7 +10,11 @@
 	scopelist = "! f() { echo 'global settings'; git config --global --get-regexp $1; echo 'local settings'; git config --get-regexp $1; }; f"
 [core]
   fscache = true
+	quotepath = false
 [diff]
 	tool = vimdiff
 [difftool]
 	prompt = false
+[gitreview]
+	remote = origin
+	remote = origin
