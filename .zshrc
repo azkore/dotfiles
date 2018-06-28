@@ -133,3 +133,11 @@ zstyle ':completion:*' rehash true
 test -f /usr/local/bin/aws_zsh_completer.sh && source /usr/local/bin/aws_zsh_completer.sh
 
 test -f ~/.zshrc.`uname` && source ~/.zshrc.`uname`
+
+#k8s
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+KUBE_PS1_SYMBOL_COLOR=cyan
+KUBE_PS1_CTX_COLOR=green
+KUBE_PS1_NS_COLOR=red
+kubeoff -g

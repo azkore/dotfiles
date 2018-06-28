@@ -69,3 +69,9 @@ alias s='exec stmux'
 #ssh() { printf '\033k'$1'\033\\'; /usr/bin/ssh $1 ;}
 ssh() { host=`echo ${@: -1} | sed 's/.*@//'`; printf '\033k'$host'\033\\'; /usr/bin/ssh -Y $@ ;}
 mosh() { printf '\033k'${@: -1}'\033\\'; /usr/bin/mosh $@ ;}
+
+alias kx='kubeon; kubensx use'
+alias kon=kubeon
+alias koff=kubeoff
+alias kc=kctx
+alias kn=kns
