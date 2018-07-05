@@ -1,6 +1,7 @@
 export SHELL=`which zsh`
 
 # Path to your oh-my-zsh installation.
+export ZSH_DISABLE_COMPFIX=true
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
