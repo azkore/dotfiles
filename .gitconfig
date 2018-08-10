@@ -1,20 +1,23 @@
 [push]
-	default = simple
+  default = simple
 [user]
-	name = Eugene Korekin
-	email = azcore@gmail.com
+  name = Eugene Korekin
+  email = azcore@gmail.com
 [color]
-	ui = auto
+  ui = auto
 [alias]
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	scopelist = "! f() { echo 'global settings'; git config --global --get-regexp $1; echo 'local settings'; git config --get-regexp $1; }; f"
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  scopelist = "! f() { echo 'global settings'; git config --global --get-regexp $1; echo 'local settings'; git config --get-regexp $1; }; f"
 [core]
   fscache = true
-	quotepath = false
+  quotepath = false
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [difftool]
-	prompt = false
+  prompt = false
 [gitreview]
-	remote = origin
-	remote = origin
+  remote = origin
+  remote = origin
