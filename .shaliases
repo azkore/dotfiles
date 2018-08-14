@@ -73,5 +73,5 @@ mosh() { printf '\033k'${@: -1}'\033\\'; /usr/bin/mosh $@ ;}
 alias kx='kubeon; kubensx use'
 alias kon=kubeon
 alias koff=kubeoff
-alias kc=kctx
-alias kn=kns
+alias kc=kubectx
+alias kn=kubens
