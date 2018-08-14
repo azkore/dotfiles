@@ -3,7 +3,7 @@
 ulimit -c 0
 #set -o vi
 [ -x /usr/bin/dircolors ] && eval `/usr/bin/dircolors`
-export PATH=~/bin/:~/.local/bin/:$PATH
+export PATH=~/bin/:~/.local/bin/:~/.nimble/bin/:~/go/bin/:$PATH
 
 export GITHUB_USER="azkore"
 #export GREP_OPTIONS='--color=auto'
