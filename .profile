@@ -1,1 +1,1 @@
-export PATH=~/bin/:~/.local/bin/:~/.nimble/bin/:~/go/bin/:$PATH
+export PATH=~/bin:~/.local/bin:~/.nimble/bin:~/go/bin:$PATH
