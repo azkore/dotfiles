@@ -27,8 +27,8 @@ elif command -v clang >/dev/null 2>&1; then
   COMPILER=--cc:clang
 fi
 
-output=$(mktemp -d -t -- `basename ${1}`.XXXX)
-trap "rm -rf $output" EXIT
+output=$(mktemp -d -t -- "$(basename "${1}").XXXX")
+trap "rm -rf \"$output\"" EXIT
 
 nim c --verbosity:0 \
       --hints:off \
@@ -44,7 +44,7 @@ shift
 
 if [ "$compiler_exit" -eq 0 ]; then  # compile success
   # "$@" is necessary to preserve whitespaces in arguments, which $* doesn't
-  $output/executable "$@"
+  "$output/executable" "$@"
   exit $?
 else  # compile fail
   exit $compiler_exit
