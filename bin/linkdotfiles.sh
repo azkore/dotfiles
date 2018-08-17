@@ -29,7 +29,7 @@ for file in $linkfiles; do
   #echo "Moving any existing dotfiles from ~ to $olddir"
   [ -e ~/$file ] && [ ! -L ~/$file ] && ( set -x; mv ~/$file ~/dotfiles_old/ )
   #echo "Creating symlink to $file in home directory."
-  [ ! -e ~/$file ] && ( set -x; ln -s $dir/$file ~/$file; )
+  [ ! -e ~/$file ] && ( set -x; ln -rs $dir/$file ~/$file; )
   set +x
 done
 
