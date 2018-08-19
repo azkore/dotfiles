@@ -11,7 +11,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 #files=".mc .ssh .bashrc .vimrc .vim .zshrc .oh-my-zsh"    # list of files/folders to symlink in homedir
 cd $dir
-linkfiles=".config/nim.cfg .gitconfig `echo * | sed "s/ \.git[^[:space:]]*//g"  | sed "s/\.config//g"`"
+linkfiles=".config/nim .config/nim.cfg .gitconfig `echo * | sed "s/ \.git[^[:space:]]*//g"  | sed "s/\.config//g"`"
 cd
 createdirs=".vimbackup .vimswap .vimundo"
 
