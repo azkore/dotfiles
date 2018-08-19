@@ -1568,15 +1568,32 @@ end
 # Better GDB defaults ----------------------------------------------------------
 
 set history save
+set history filename ~/.gdb_history
 set verbose off
 set print pretty on
 set print array off
 set print array-indexes on
 set python print-stack full
+set disassembly-flavor intel
+
+define tui-on
+dashboard -enabled off
+dashboard -style prompt '(gdb)'
+tui enable
+layout asm
+layout regs
+end
+
+define tui-off
+tui disable
+dashboard -style prompt '{status}'
+dashboard -enabled on
+end
 
 # Start ------------------------------------------------------------------------
 
 python Dashboard.start()
+tui-on
 
 # ------------------------------------------------------------------------------
 # Copyright (c) 2015-2017 Andrea Cardaci <cyrus.and@gmail.com>
