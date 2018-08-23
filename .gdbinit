@@ -1590,9 +1590,20 @@ dashboard -style prompt '{status}'
 dashboard -enabled on
 end
 
+define dbon
+python Dashboard.start()
+dashboard -enabled on
+end
+
+define dboff
+dashboard -enabled off
+end
+
+
+
 # Start ------------------------------------------------------------------------
 
-python Dashboard.start()
+# dbon
 # tui-on
 
 # ------------------------------------------------------------------------------
