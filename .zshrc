@@ -118,6 +118,7 @@ alias -g O="2>&1"
 set -o vi
 bindkey -M viins '^A' beginning-of-line
 bindkey -M viins '^E' end-of-line
+bindkey -M viins '^O' accept-line-and-down-history
 bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M vicmd '^R' history-incremental-search-backward
 autoload -Uz history-beginning-search-menu; zle -N history-beginning-search-menu
