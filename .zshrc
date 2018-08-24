@@ -147,3 +147,6 @@ if [ -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ]; then
   KUBE_PS1_NS_COLOR=red
   kubeoff -g
 fi
+
+dmachine() {eval $(docker-machine env default)}
+dformac() {unset `echo ${(Mk)parameters:#DOCK*}`}
