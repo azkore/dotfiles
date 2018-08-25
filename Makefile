@@ -1,9 +1,27 @@
-P=hello
-OBJECTS=
-CFLAGS = -g -Wall -O3
-LDLIBS=
+OS := $(shell uname)
+ifeq ($(OS),Darwin)
+	FORMAT=macho64
+	OSFLAGS := -DOSX
+else
+	FORMAT=elf64
+ endif
 
-all: $(P)
-	./$(P)
+ASMFLAGS := ${OSFLAGS} -f${FORMAT}
 
-$(P): $(OBJECTS)
+ifeq ($(ASM),yasm)
+	ASMFLAGS := ${ASMFLAGS} -gdwarf2
+else
+	ASM=nasm
+	ASMFLAGS := ${ASMFLAGS} -Fdwarf
+endif
+
+%.o : %.asm
+	$(ASM) ${ASMFLAGS} $< -o $@
+
+% : %.o
+	ld $< -o $@
+
+.PHONY : clean
+clean:
+	$(RM) *.o
+	find . -type f -executable ! -name "*.*" -delete
