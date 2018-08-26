@@ -24,4 +24,5 @@ endif
 .PHONY : clean
 clean:
 	$(RM) *.o
-	find . -type f -executable ! -name "*.*" -delete
+	find . -maxdepth 1 -type f -executable ! -name "*.*" \
+	-printf "deleting %p\n" -delete
