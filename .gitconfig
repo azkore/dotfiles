@@ -21,3 +21,5 @@
 [gitreview]
   remote = origin
   remote = origin
+[url "git@github.com:"]
+	insteadOf = https://github.com/
