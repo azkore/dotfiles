@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -85,7 +85,7 @@ source ~/.shaliases
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-PROMPT="%n@%m %3~ %(!.#.$) "    # default prompt
+#PROMPT="%n@%m %3~ %(!.#.$) "    # default prompt
 HISTSIZE=100000
 SAVEHIST=100000
 # correct commands but not args
@@ -139,14 +139,19 @@ test -f /usr/local/bin/aws_zsh_completer.sh && source /usr/local/bin/aws_zsh_com
 test -f ~/.zshrc.`uname` && source ~/.zshrc.`uname`
 
 #k8s
-if [ -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ]; then
-  source /usr/local/opt/kube-ps1/share/kube-ps1.sh
-  PS1='$(kube_ps1)'$PS1
-  KUBE_PS1_SYMBOL_COLOR=cyan
-  KUBE_PS1_CTX_COLOR=green
-  KUBE_PS1_NS_COLOR=red
-  kubeoff -g
-fi
+#if [ -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ]; then
+#  source /usr/local/opt/kube-ps1/share/kube-ps1.sh
+#  PS1='$(kube_ps1)'$PS1
+#  KUBE_PS1_SYMBOL_COLOR=cyan
+#  KUBE_PS1_CTX_COLOR=green
+#  KUBE_PS1_NS_COLOR=red
+#  kubeoff -g
+#fi
 
 dmachine() {eval $(docker-machine env default)}
 dformac() {unset `echo ${(Mk)parameters:#DOCK*}`}
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
+
+SPACESHIP_KUBECONTEXT_COLOR=blue
