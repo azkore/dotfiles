@@ -1,2 +1,2 @@
 alias ls="gls --color=auto"
-alias lldb="DYLD_FRAMEWORK_PATH=\"$(brew --prefix python@2)/Frameworks/\" lldb"
+#alias lldb="DYLD_FRAMEWORK_PATH=\"$(brew --prefix python@2)/Frameworks/\" lldb"
