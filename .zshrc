@@ -58,7 +58,12 @@ alias -g G="|grep"
 alias -g N="&>/dev/null&"
 alias -g O="2>&1"
 
+autoload -z edit-command-line
+zle -N edit-command-line
+
 set -o vi
+bindkey "^X^E" edit-command-line
+bindkey -M vicmd v edit-command-line
 bindkey -M viins '^A' beginning-of-line
 bindkey -M viins '^E' end-of-line
 bindkey -M viins '^O' accept-line-and-down-history
@@ -97,6 +102,7 @@ autoload -U +X bashcompinit && bashcompinit
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 #POWERLEVEL9K_MODE='awesome-patched'
 DEFAULT_USER=euk
+#POWERLEVEL9K_COLOR_SCHEME='light'
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext aws vcs newline context dir background_jobs command_execution_time vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator history time)
