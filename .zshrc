@@ -37,9 +37,9 @@ setopt correct
 setopt share_history
 setopt histexpiredupsfirst #duplicate history lines are expired firs
 setopt histfindnodups #no duplicate history lines found
-#setopt histignorealldups #ignore all duplicated history lines
-#setopt histreduceblanks #possible garble history
-#setopt histsavenodups
+setopt histignorealldups #ignore all duplicated history lines
+setopt histreduceblanks #possible garble history
+setopt histsavenodups
 setopt histverify #verify history expansion
 setopt incappendhistory #update history right after input
 setopt sharehistory
