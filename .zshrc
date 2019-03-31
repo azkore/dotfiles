@@ -134,8 +134,9 @@ zplug "peterhurford/up.zsh"
 zplug "jimeh/zsh-peco-history"
 ###########################################################
 # Theme
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+#zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "plugins/kubectl", from:oh-my-zsh
+zplug "plugins/git-prompt", from:oh-my-zsh
 zplug "djui/alias-tips"
 #zplug "b-ryan/powerline-shell"
 #
