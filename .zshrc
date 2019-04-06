@@ -113,7 +113,7 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_VI_INSERT_MODE_STRING=''
 # Loads zplug
-source $ZPLUG_HOME/init.zsh
+source $ZPLUG/init.zsh
 
 # Clear packages
 #zplug clear
