@@ -113,33 +113,19 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_VI_INSERT_MODE_STRING=''
-# Loads zplug
-source $ZPLUG/init.zsh
-
-# Clear packages
-#zplug clear
 #
 # ###########################################################
 # # Packages
 #
 #zplug "paulmelnikow/zsh-startup-timer"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
 #zplug"tysonwolker/iterm-tab-colors"
 #zplug "desyncr/auto-ls"
 #zplug "momo-lab/zsh-abbrev-alias"
 #zplug "rawkode/zsh-docker-run"
 #zplug "arzzen/calc.plugin.zsh"
-zplug "peterhurford/up.zsh"
-zplug "jimeh/zsh-peco-history"
 ###########################################################
 # Theme
 #zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
-zplug "plugins/kubectl", from:oh-my-zsh
-zplug "plugins/git",   from:oh-my-zsh, if:"which git"
-zplug "plugins/git-prompt", from:oh-my-zsh
-zplug "djui/alias-tips"
 #zplug "b-ryan/powerline-shell"
 #
 #function powerline_precmd() {
@@ -160,18 +146,24 @@ zplug "djui/alias-tips"
 #fi
 #
 ###########################################################
-# Install packages that have not been installed yet
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    else
-        echo
-    fi
-fi
+#eval "$(jump shell)"
 
-zplug load
 
-###########################################################
-eval "$(jump shell)"
-
+### Added by Zplugin's installer
+source "${HOME}/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+export ZSH_CACHE_DIR="${TMPDIR:-/tmp}"
+zplugin ice svn
+zplugin snippet OMZ::plugins/kubectl
+zplugin ice svn
+zplugin snippet OMZ::plugins/git
+zplugin ice svn
+zplugin snippet OMZ::plugins/git-prompt
+zplugin load djui/alias-tips
+zplugin load zsh-users/zsh-syntax-highlighting
+zplugin load zsh-users/zsh-autosuggestions
+zplugin load zsh-users/zsh-completions
+zplugin load peterhurford/up.zsh
+zplugin load jimeh/zsh-peco-history
+### End of Zplugin's installer chunk
