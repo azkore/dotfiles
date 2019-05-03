@@ -90,3 +90,5 @@ test -f ~/.shrc.`uname` && source ~/.shrc.`uname`
 
 export TMUX_VERSION=$(tmux -V | cut -f2 -d' ')
 export MAKEFILES=~/Makefile
+
+export AWS_VAULT_BACKEND="file"

@@ -86,8 +86,8 @@ zstyle ':completion:*' rehash true
 #test -f /usr/local/bin/aws_zsh_completer.sh && source /usr/local/bin/aws_zsh_completer.sh
 
 #k8s
-if [ -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ]; then
-  source /usr/local/opt/kube-ps1/share/kube-ps1.sh
+if [ -f ~/bin/kube-ps1.sh ]; then
+  source ~/bin/kube-ps1.sh
   PS1='$(kube_ps1)'$PS1
   KUBE_PS1_SYMBOL_COLOR=cyan
   KUBE_PS1_CTX_COLOR=green
