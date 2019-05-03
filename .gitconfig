@@ -1,8 +1,8 @@
 [push]
   default = simple
 [user]
-  name = Eugene Korekin
-  email = azcore@gmail.com
+	name = Eugene Korekin
+	email = eugene@babelforce.com
 [color]
   ui = auto
 [alias]
@@ -11,9 +11,12 @@
   ignored = !git ls-files -v | grep "^[[:lower:]]"
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   scopelist = "! f() { echo 'global settings'; git config --global --get-regexp $1; echo 'local settings'; git config --get-regexp $1; }; f"
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
   fscache = true
   quotepath = false
+  crlf = false
+	autocrlf = input
 [diff]
   tool = vimdiff
 [difftool]
@@ -22,4 +25,4 @@
   remote = origin
   remote = origin
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
