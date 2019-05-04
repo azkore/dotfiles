@@ -1702,4 +1702,6 @@ hi CursorLine term=underline cterm=underline gui=underline ctermbg=NONE guibg=NO
 hi CursorLineNR term=underline cterm=underline,bold gui=underline ctermbg=NONE ctermfg=NONE
 endif
 
+let g:netrw_home=$XDG_CACHE_HOME.'/vim'
+
 " vim: set foldlevel=0 foldmethod=marker :
