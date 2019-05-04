@@ -16,7 +16,7 @@
   fscache = true
   quotepath = false
   crlf = false
-	autocrlf = input
+	autocrlf = false
 [diff]
   tool = vimdiff
 [difftool]
