@@ -5,6 +5,8 @@ export SHELL=`which zsh`
 export ZSH_CACHE_DIR="${TMPDIR}/zsh"
 [ -d "$ZSH_CACHE_DIR" ] || mkdir -p $ZSH_CACHE_DIR
 
+autoload -U compinit
+compinit
 # https://github.com/zplug/zplug/pull/396
 if [[ ${UID} -eq 0 ]] && [[ -n ${SUDO_USER} ]]; then
 # Disable file permissions check since we did it when starting the shell executing sudo
