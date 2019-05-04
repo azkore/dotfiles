@@ -158,13 +158,22 @@ autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 ### End of Zplugin's installer chunk
 
-zplugin ice svn; zplugin snippet OMZ::plugins/git
-zplugin ice svn; zplugin snippet OMZ::plugins/git-prompt
-zplugin ice svn; zplugin snippet OMZ::plugins/kubectl; source $ZSH_CACHE_DIR/kubectl_completion
-zplugin load djui/alias-tips
-zplugin load zsh-users/zsh-syntax-highlighting
-zplugin load zsh-users/zsh-autosuggestions
-zplugin load zsh-users/zsh-completions
-zplugin load peterhurford/up.zsh
-#zplugin load jimeh/zsh-peco-history
-zplugin load zdharma/history-search-multi-word
+zplugin ice svn wait'0' lucid
+zplugin snippet OMZ::plugins/git
+zplugin ice svn wait'0' lucid
+zplugin snippet OMZ::plugins/git-prompt
+zplugin ice svn wait'0' lucid
+zplugin snippet OMZ::plugins/kubectl
+source $ZSH_CACHE_DIR/kubectl_completion
+zplugin ice svn wait'0' lucid
+zplugin light djui/alias-tips
+zplugin ice svn wait'0' lucid
+zplugin light zsh-users/zsh-syntax-highlighting
+zplugin ice wait'1' lucid atlight'_zsh_autosuggest_start'
+zplugin light zsh-users/zsh-autosuggestions
+zplugin ice svn wait'0' lucid
+zplugin light zsh-users/zsh-completions
+zplugin ice svn wait'0' lucid
+zplugin light peterhurford/up.zsh
+zplugin ice svn wait'0' lucid
+zplugin light zdharma/history-search-multi-word
