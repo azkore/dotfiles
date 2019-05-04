@@ -168,7 +168,7 @@ source $ZSH_CACHE_DIR/kubectl_completion
 zplugin ice svn wait'0' lucid
 zplugin light djui/alias-tips
 zplugin ice svn wait'0' lucid
-zplugin light zsh-users/zsh-syntax-highlighting
+zplugin light zdharma/fast-syntax-highlighting
 zplugin ice wait'1' lucid atlight'_zsh_autosuggest_start'
 zplugin light zsh-users/zsh-autosuggestions
 zplugin ice svn wait'0' lucid
