@@ -166,5 +166,5 @@ zplugin load zsh-users/zsh-syntax-highlighting
 zplugin load zsh-users/zsh-autosuggestions
 zplugin load zsh-users/zsh-completions
 zplugin load peterhurford/up.zsh
-zplugin load jimeh/zsh-peco-history
-### End of Zplugin's installer chunk
+#zplugin load jimeh/zsh-peco-history
+zplugin load zdharma/history-search-multi-word
