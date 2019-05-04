@@ -28,7 +28,8 @@ export LC_TELEPHONE=C.UTF-8
 export LC_MEASUREMENT=C.UTF-8
 export LC_IDENTIFICATION=C.UTF-8
 
-
+export XDG_CACHE_HOME=${HOME}/.cache
+export TMPDIR=$XDG_CACHE_HOME
 
 ## emacsing
 if [ eterm = $TERM ]; then

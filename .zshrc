@@ -1,4 +1,10 @@
+source ~/.shrc
+source ~/.shaliases
+
 export SHELL=`which zsh`
+export ZSH_CACHE_DIR="${TMPDIR}/zsh"
+[ -d "$ZSH_CACHE_DIR" ] || mkdir -p $ZSH_CACHE_DIR
+
 # https://github.com/zplug/zplug/pull/396
 if [[ ${UID} -eq 0 ]] && [[ -n ${SUDO_USER} ]]; then
 # Disable file permissions check since we did it when starting the shell executing sudo
@@ -22,9 +28,6 @@ zstyle ':completion:*' menu select # select completions with arrow keys
 zstyle ':completion:*' group-name '' # group results by category
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
 
-# User configuration
-source ~/.shrc
-source ~/.shaliases
 test -f ~/.zshrc.`uname` && source ~/.zshrc.`uname`
 
 PROMPT="%n@%m %3~ %(!.#.$) "    # default #prompt
@@ -153,13 +156,11 @@ POWERLEVEL9K_VI_INSERT_MODE_STRING=''
 source "${HOME}/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
-export ZSH_CACHE_DIR="${TMPDIR:-/tmp}"
-zplugin ice svn
-zplugin snippet OMZ::plugins/kubectl
-zplugin ice svn
-zplugin snippet OMZ::plugins/git
-zplugin ice svn
-zplugin snippet OMZ::plugins/git-prompt
+### End of Zplugin's installer chunk
+
+zplugin ice svn; zplugin snippet OMZ::plugins/git
+zplugin ice svn; zplugin snippet OMZ::plugins/git-prompt
+zplugin ice svn; zplugin snippet OMZ::plugins/kubectl; source $ZSH_CACHE_DIR/kubectl_completion
 zplugin load djui/alias-tips
 zplugin load zsh-users/zsh-syntax-highlighting
 zplugin load zsh-users/zsh-autosuggestions
