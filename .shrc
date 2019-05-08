@@ -1,5 +1,6 @@
 #rc file for all shells
-#umask 002
+export SHELL=/bin/bash
+umask 022
 ulimit -c 0
 #set -o vi
 [ -x /usr/bin/dircolors ] && eval `/usr/bin/dircolors`
