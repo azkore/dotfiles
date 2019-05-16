@@ -1,3 +1,2 @@
 export ZPLUG=/usr/share/zplug
-export DISPLAY=:0.0
 #export DOCKER_HOST=tcp://localhost:2375
