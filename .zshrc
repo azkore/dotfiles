@@ -179,3 +179,4 @@ zplugin ice svn wait'0' lucid
 zplugin light peterhurford/up.zsh
 zplugin ice svn wait'0' lucid
 zplugin light zdharma/history-search-multi-word
+bindkey "^T" history-incremental-search-backward
