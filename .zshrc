@@ -18,7 +18,7 @@ fi
 HIST_STAMPS="yyyy-mm-dd"
 #
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+#DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -54,7 +54,7 @@ export LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 #export TERM=xterm-256color
 #set term title to hostname
-print -Pn "\e]2;`hostname`\a"
+#print -Pn "\e]2;`hostname`\a"
 
 #zsh global aliases
 alias -g L="|less"
@@ -179,4 +179,18 @@ zplugin ice svn wait'0' lucid
 zplugin light peterhurford/up.zsh
 zplugin ice svn wait'0' lucid
 zplugin light zdharma/history-search-multi-word
+zplugin ice svn wait'0' lucid
+#zplugin light zpm-zsh/title
+#PROMPT_TITLE=`print -P %~`
+#zplugin ice svn wait'0' lucid
+#zplugin light bonnefoa/kubectl-fzf
 bindkey "^T" history-incremental-search-backward
+
+_show_title(){
+  echo -ne '\033]0;'
+  print -P %~
+  echo -ne '\007'
+}
+
+_show_title
+precmd_functions+=(_show_title)
