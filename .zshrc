@@ -32,7 +32,8 @@ zstyle ':completion:::::' completer _expand _complete _ignored _approximate # en
 
 test -f ~/.zshrc.`uname` && source ~/.zshrc.`uname`
 
-PROMPT="%n@%m %3~ %(!.#.$) "    # default #prompt
+#PROMPT="%n@%m %3~ %(!.#.$) "    # default #prompt
+PROMPT='%n@%m %15<..<%~%<< %(!.#.$) '
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
