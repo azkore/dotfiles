@@ -94,3 +94,9 @@ export TMUX_VERSION=$(tmux -V | cut -f2 -d' ')
 #export MAKEFILES=~/Makefile
 
 export AWS_VAULT_BACKEND="file"
+
+export KUBE_PS1_SYMBOL_ENABLE=false
+function get_cluster_short() {
+  echo "$1" | sed s/^k8s\.//g | awk -F. '{print toupper($2)"."$1}'
+}
+export KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
