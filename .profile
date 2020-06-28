@@ -5,3 +5,5 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export EDITOR=vim
 echo this is a login shell
 test -f ~/.profile.${HOSTNAME} && source ~/.profile.${HOSTNAME}
+
+export CDPATH=~/bf/sre

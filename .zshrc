@@ -199,3 +199,5 @@ _show_title
 precmd_functions+=(_show_title)
 
 export SHOW_AWS_PROMPT=true
+eval "$(jump shell zsh --bind=z)"
+
