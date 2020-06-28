@@ -181,6 +181,8 @@ zplugin light peterhurford/up.zsh
 zplugin ice svn wait'0' lucid
 zplugin light zdharma/history-search-multi-word
 zplugin ice svn wait'0' lucid
+zplugin snippet OMZ::plugins/aws
+#zplugin ice svn wait'0' lucid
 #zplugin light zpm-zsh/title
 #PROMPT_TITLE=`print -P %~`
 #zplugin ice svn wait'0' lucid
@@ -195,3 +197,5 @@ _show_title(){
 
 _show_title
 precmd_functions+=(_show_title)
+
+export SHOW_AWS_PROMPT=true
