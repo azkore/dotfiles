@@ -91,16 +91,6 @@ TF_ALIAS=fuck alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 zstyle ':completion:*' rehash true
 #test -f /usr/local/bin/aws_zsh_completer.sh && source /usr/local/bin/aws_zsh_completer.sh
 
-#k8s
-if [ -f ~/bin/kube-ps1.sh ]; then
-  source ~/bin/kube-ps1.sh
-  PS1='$(kube_ps1)'$PS1
-  KUBE_PS1_SYMBOL_COLOR=cyan
-  KUBE_PS1_CTX_COLOR=green
-  KUBE_PS1_NS_COLOR=red
-  kubeoff -g
-fi
-
 dmachine() {eval $(docker-machine env default)}
 dformac() {unset `echo ${(Mk)parameters:#DOCK*}`}
 
@@ -161,27 +151,44 @@ autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 ### End of Zplugin's installer chunk
 
-zplugin ice svn wait'0' lucid
-zplugin snippet OMZ::plugins/git
-zplugin ice svn wait'0' lucid
-zplugin snippet OMZ::plugins/git-prompt
-zplugin ice svn wait'0' lucid
-zplugin snippet OMZ::plugins/kubectl
+zplugin ice svn wait'2' lucid; zplugin snippet OMZ::plugins/git
+
+zplugin ice svn wait'2' lucid; zplugin snippet OMZ::plugins/kubectl
 source $ZSH_CACHE_DIR/kubectl_completion
-zplugin ice svn wait'0' lucid
-zplugin light djui/alias-tips
-zplugin ice svn wait'0' lucid
-zplugin light zdharma/fast-syntax-highlighting
-zplugin ice wait'1' lucid atlight'_zsh_autosuggest_start'
+
+zplugin ice svn wait'2' lucid; zplugin light djui/alias-tips
+zplugin ice svn wait'2' lucid; zplugin light zdharma/fast-syntax-highlighting
+
+zplugin ice wait'2' lucid atlight'_zsh_autosuggest_start'
 zplugin light zsh-users/zsh-autosuggestions
-zplugin ice svn wait'0' lucid
-zplugin light zsh-users/zsh-completions
-zplugin ice svn wait'0' lucid
-zplugin light peterhurford/up.zsh
-zplugin ice svn wait'0' lucid
-zplugin light zdharma/history-search-multi-word
-zplugin ice svn wait'0' lucid
-zplugin snippet OMZ::plugins/aws
+
+zplugin ice wait'3' lucid; zplugin light zsh-users/zsh-completions
+zplugin ice wait'3' lucid; zplugin light peterhurford/up.zsh
+zplugin ice wait lucid; zplugin light zdharma/history-search-multi-word
+
+# prompt
+zplugin ice svn; zplugin snippet OMZ::plugins/git-prompt
+zplugin ice svn; zplugin snippet OMZ::plugins/aws
+zplugin ice svn; zplugin snippet OMZ::plugins/vi-mode
+RPROMPT='$(vi_mode_prompt_info)'$RPROMPT
+
+#zplugin light mengelbrecht/slimline
+#SLIMLINE_LEFT_PROMPT_SECTIONS="k8s |default|"
+zplugin light jonmosco/kube-ps1
+PS1='$(kube_ps1)'$PS1
+#slimline::section::k8s::render() {
+#  kube_ps1
+#}
+KUBE_PS1_SYMBOL_COLOR=cyan
+KUBE_PS1_CTX_COLOR=green
+KUBE_PS1_NS_COLOR=red
+#if typeset -f kubeoff > /dev/null; then
+#  echo there is a foo function
+#  kubeoff -g
+#fi
+
+
+
 #zplugin ice svn wait'0' lucid
 #zplugin light zpm-zsh/title
 #PROMPT_TITLE=`print -P %~`
