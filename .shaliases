@@ -75,7 +75,7 @@ alias kctx=kubectx
 alias kns=kubens
 alias grep='grep --color'
 alias egrep='egrep --color'
-alias code=code-insiders
+#alias code=code-insiders
 alias bb='kubectl run busybox --image=busybox:1.28 --rm -it --restart=Never --command --'
 alias dropcaches='echo "sync && echo 3 > /proc/sys/vm/drop_caches" | sudo sh'
 alias awsume=". awsume"
